@@ -77,7 +77,7 @@ async def getLeaguePrediction(leagueId):
     return response.json()
 
 
-@scheduler.scheduled_job('cron', hour=14, minute=30)
+@scheduler.scheduled_job('cron', hour=8, minute=30)
 async def main():
     print(' Sending new predictions!')
     client.parse_mode = 'html'
